@@ -5,19 +5,22 @@ import './App.css';
 import {
 Route
 } from "react-router-dom";
-
 //Actions
 import {
-  login,
-  tokenValidation
+
 } from '../Store/Actions';
 
 import PageOne from './PageOne'
 import Restricted from './Restricted'
+
 class App extends Component {
-    
+
+    constructor(props){
+        super(props)
+    }
+
     componentWillMount(){
-        this.props.tokenValidation()
+        
     }
 
     render() {
@@ -39,6 +42,5 @@ const mapStateToProps = state => {
   };
 };
 export default connect(mapStateToProps, {
-  login,
-  tokenValidation
+
 })(App);

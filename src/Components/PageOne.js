@@ -2,17 +2,19 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 // Redux Actions
 import {
-    login,
+    projectInfo,
 } from '../Store/Actions';
 
 const obj ={
     email: 'joe@joe.com',
     password: 'river'
 }
+ 
 
 class PageOne extends Component {
+    
     render() {
-        //console.log(this.props)
+        console.log('render')
         return (
             <div>
                 <h2>Page One</h2>
@@ -26,10 +28,11 @@ class PageOne extends Component {
 
 const mapStateToProps = state => {
     let { info } = state.auth
+    console.log(state)
     return { 
        info
     };
 };
 export default connect(mapStateToProps, {
-    login
+    projectInfo
 })(PageOne);

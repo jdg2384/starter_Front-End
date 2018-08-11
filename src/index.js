@@ -7,7 +7,7 @@ import { createStore, applyMiddleware } from 'redux';
 import Reducer from './Store/Reducers';
 import ReduxThunk from 'redux-thunk';
 
-import history from './Containers/History'
+import history from './Components/History'
 //Router
 import {
     Router,
@@ -16,7 +16,7 @@ import {
 } from "react-router-dom";
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 //App
-import App from './Containers/App';
+import App from './Components/App';
 import registerServiceWorker from './registerServiceWorker';
 //reducer, 
 const store = createStore(Reducer, {}, applyMiddleware(ReduxThunk));

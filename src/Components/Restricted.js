@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 // Redux Actions
 import {
-    login,
+    projectInfo,
 } from '../Store/Actions';
 
 class Restricted extends Component {
@@ -24,5 +24,5 @@ const mapStateToProps = state => {
     };
 };
 export default connect(mapStateToProps, {
-    login
+    projectInfo
 })(Restricted);
